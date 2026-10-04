@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap' }}>
           <div>
             <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.25rem' }}>
-              Stay in the Loop <Sparkles size={16} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '0.3rem' }} />
+              Stay in the Loop
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               Get exclusive deals, new arrivals and insider news.
@@ -138,3 +138,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
