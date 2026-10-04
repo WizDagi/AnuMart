@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Trash2, Plus, Minus, Tag, ChevronRight } from 'lucide-react';
+import { X, ShoppingBag, Trash2, Plus, Minus, Tag, ChevronRight, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 
@@ -79,7 +79,7 @@ const CartDrawer = () => {
                     {item.image ? (
                       <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     ) : (
-                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}>🛍️</div>
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ShoppingBag size={22} color="var(--text-muted)" /></div>
                     )}
                   </div>
 
@@ -143,7 +143,7 @@ const CartDrawer = () => {
                 </button>
               </div>
               {promoApplied && (
-                <p style={{ fontSize: '0.8rem', color: 'var(--success)', marginTop: '0.4rem' }}>✓ {promoApplied} applied — {(PROMO_CODES[promoApplied] * 100).toFixed(0)}% off!</p>
+                <p style={{ fontSize: '0.8rem', color: 'var(--success)', marginTop: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Check size={14} /> {promoApplied} applied — {(PROMO_CODES[promoApplied] * 100).toFixed(0)}% off!</p>
               )}
               {promoError && (
                 <p style={{ fontSize: '0.8rem', color: 'var(--error)', marginTop: '0.4rem' }}>{promoError}</p>

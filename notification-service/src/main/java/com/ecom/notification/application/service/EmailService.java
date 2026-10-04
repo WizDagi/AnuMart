@@ -54,7 +54,7 @@ public class EmailService {
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
             helper.setTo(toEmail);
-            helper.setSubject("Premium Order Confirmed! - E-COM");
+            helper.setSubject("Premium Order Confirmed! - AnuMart");
             helper.setText(emailBody, true); // true enables HTML body
             helper.setFrom(fromEmail);
 

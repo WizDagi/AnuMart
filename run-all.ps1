@@ -1,4 +1,4 @@
-# E-Commerce Microservices & Frontend Orchestrator
+# AnuMart Microservices & Frontend Orchestrator
 # Author: Antigravity
 
 $ErrorActionPreference = "Stop"
@@ -24,7 +24,7 @@ $Services = @(
 )
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host "      E-COMMERCE SYSTEM LOCAL ORCHESTRATOR                " -ForegroundColor Cyan
+Write-Host "      ANUMART SYSTEM LOCAL ORCHESTRATOR                   " -ForegroundColor Cyan
 Write-Host "==========================================================" -ForegroundColor Cyan
 
 # 1. Check PostgreSQL (port 5432)

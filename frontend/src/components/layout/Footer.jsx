@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Package, Github, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Package, Github, Twitter, Instagram, Linkedin, Mail, Sparkles, Check, Heart, Lock, CreditCard, Rocket } from 'lucide-react';
 
 const LINKS = {
   Shop:    [{ label: 'All Products', to: '/shop' }, { label: 'New Arrivals', to: '/shop' }, { label: 'Best Sellers', to: '/shop' }, { label: 'Wishlist', to: '/wishlist' }],
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap' }}>
           <div>
             <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.25rem' }}>
-              Stay in the Loop ✨
+              Stay in the Loop <Sparkles size={16} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '0.3rem' }} />
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               Get exclusive deals, new arrivals and insider news.
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
           {subscribed ? (
             <div style={{ color: 'var(--success)', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              ✓ You're subscribed! Welcome aboard.
+              <Check size={16} /> You're subscribed! Welcome aboard.
             </div>
           ) : (
             <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: '0.75rem', flex: '1', maxWidth: '420px' }}>
@@ -72,7 +72,7 @@ const Footer = () => {
             <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <Package size={28} color="var(--primary)" />
               <span style={{ fontSize: '1.4rem', fontWeight: '800', letterSpacing: '-0.5px' }}>
-                E-COM<span style={{ color: 'var(--primary)' }}>.</span>
+                AnuMart<span style={{ color: 'var(--primary)' }}>.</span>
               </span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.7, marginBottom: '1.5rem', maxWidth: '200px' }}>
@@ -120,11 +120,15 @@ const Footer = () => {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <p style={{ fontSize: '0.82rem', color: 'var(--text-subtle)' }}>
-            © {new Date().getFullYear()} E-COM. All rights reserved. Built with ❤️ on Spring Boot microservices.
+            © 2026 AnuMart. All rights reserved. Developed by Dagim Anteneh.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            {['🔒 SSL Secured', '💳 PCI Compliant', '🚀 Fast Delivery'].map(t => (
-              <span key={t} style={{ fontSize: '0.78rem', color: 'var(--text-subtle)' }}>{t}</span>
+            {[
+              { icon: <Lock size={13} />, label: 'SSL Secured' },
+              { icon: <CreditCard size={13} />, label: 'PCI Compliant' },
+              { icon: <Rocket size={13} />, label: 'Fast Delivery' },
+            ].map(t => (
+              <span key={t.label} style={{ fontSize: '0.78rem', color: 'var(--text-subtle)', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>{t.icon} {t.label}</span>
             ))}
           </div>
         </div>

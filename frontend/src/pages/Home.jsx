@@ -40,10 +40,7 @@ const Home = () => {
       {/* 1. Hero Section */}
       <section className="container" style={{ paddingTop: '160px', paddingBottom: '6rem', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '4rem', alignItems: 'center' }}>
         <div className="animate-fade" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--primary-glow)', border: '1px solid var(--border-hover)', padding: '0.4rem 1rem', borderRadius: 'var(--radius-full)', width: 'fit-content' }}>
-            <Sparkles size={16} color="var(--primary)" />
-            <span style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--primary)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Next-Gen Tech is Here</span>
-          </div>
+
           <h1 style={{ fontSize: '4.2rem', fontWeight: '900', lineHeight: 1.1, letterSpacing: '-2px' }}>
             Elevate Your <br />
             <span className="gradient-text">Lifestyle & Power</span>

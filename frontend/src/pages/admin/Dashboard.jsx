@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../../components/admin/Sidebar';
 import StatCard from '../../components/admin/StatCard';
-import { DollarSign, ShoppingBag, Users, AlertTriangle, TrendingUp } from 'lucide-react';
+import { DollarSign, ShoppingBag, Users, AlertTriangle, TrendingUp, Check } from 'lucide-react';
 import { api } from '../../services/api';
 import { Link } from 'react-router-dom';
 
@@ -75,7 +75,7 @@ const Dashboard = () => {
       <main style={{ flex: 1, marginLeft: '280px', padding: '3rem' }}>
         <header style={{ marginBottom: '3rem' }}>
           <h1 style={{ fontSize: '2.2rem', fontWeight: '800', marginBottom: '0.5rem' }}>Overview Dashboard</h1>
-          <p style={{ color: 'var(--text-muted)' }}>Real-time telemetry and management controls for E-COM.</p>
+          <p style={{ color: 'var(--text-muted)' }}>Real-time telemetry and management controls for AnuMart.</p>
         </header>
 
         {/* Stat Cards Grid */}
@@ -122,7 +122,7 @@ const Dashboard = () => {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {lowStockProducts.length === 0 ? (
-                <p style={{ color: 'var(--success)', fontSize: '0.85rem' }}>✓ All catalog product stocks optimal.</p>
+                <p style={{ color: 'var(--success)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Check size={15} /> All catalog product stocks optimal.</p>
               ) : (
                 lowStockProducts.map(p => (
                   <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem', background: 'var(--bg-elevated)', border: '1px solid var(--border)', borderRadius: '8px' }}>

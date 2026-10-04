@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CreditCard, Truck, ShieldCheck, ShoppingBag, ChevronRight, ChevronLeft, Calendar } from 'lucide-react';
+import { CreditCard, Truck, ShieldCheck, ShoppingBag, ChevronRight, ChevronLeft, Calendar, XCircle, PartyPopper, Check } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { api } from '../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -103,7 +103,7 @@ const Checkout = () => {
       } catch (orderErr) {
         console.error('Order service error:', orderErr);
         const msg = orderErr.message || 'Order creation failed';
-        showToast(`❌ ${msg}`, 'error');
+        showToast(msg, 'error');
         setIsSubmitting(false);
         return;
       }
@@ -150,7 +150,7 @@ const Checkout = () => {
         console.warn('Notification warning (non-critical):', notifErr.message);
       }
 
-      showToast('🎉 Order placed successfully!', 'success');
+      showToast('Order placed successfully!', 'success');
       clearCart();
       setStep(3);
     } catch (err) {
@@ -203,7 +203,7 @@ const Checkout = () => {
               display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', fontSize: '0.95rem',
               transition: 'var(--transition)'
             }}>
-              {step > idx ? '✓' : idx + 1}
+              {step > idx ? <Check size={18} /> : idx + 1}
             </div>
             <span style={{ fontSize: '0.8rem', fontWeight: step === idx ? '700' : '500', color: step === idx ? 'var(--text-main)' : 'var(--text-muted)', marginTop: '0.5rem' }}>{label}</span>
           </div>

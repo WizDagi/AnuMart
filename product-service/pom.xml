@@ -13,7 +13,7 @@
     <artifactId>product-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>product-service</name>
-    <description>Product Service for E-com</description>
+    <description>Product Service for AnuMart</description>
     <properties>
         <java.version>17</java.version>
     </properties>

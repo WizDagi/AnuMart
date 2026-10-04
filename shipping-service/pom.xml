@@ -13,7 +13,7 @@
     <artifactId>shipping-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>shipping-service</name>
-    <description>Shipping Service for E-com</description>
+    <description>Shipping Service for AnuMart</description>
     <properties>
         <java.version>17</java.version>
     </properties>

@@ -88,7 +88,7 @@ const Navbar = () => {
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
           <Package size={24} color="var(--primary)" />
           <span style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '-0.5px' }}>
-            E-COM<span style={{ color: 'var(--primary)' }}>.</span>
+            AnuMart<span style={{ color: 'var(--primary)' }}>.</span>
           </span>
         </Link>
 

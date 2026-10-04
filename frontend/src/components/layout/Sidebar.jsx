@@ -44,7 +44,7 @@ const Sidebar = () => {
           <Link to="/" onClick={close} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Package size={28} color="var(--primary)" />
             <span style={{ fontSize: '1.4rem', fontWeight: '800', letterSpacing: '-0.5px' }}>
-              E-COM<span style={{ color: 'var(--primary)' }}>.</span>
+              AnuMart<span style={{ color: 'var(--primary)' }}>.</span>
             </span>
           </Link>
           <button

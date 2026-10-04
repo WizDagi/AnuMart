@@ -79,7 +79,7 @@ export const AppProvider = ({ children }) => {
         showToast('Removed from wishlist', 'info');
         return prev.filter(i => i.id !== product.id);
       }
-      showToast(`${product.name} saved to wishlist ❤️`);
+      showToast(`${product.name} saved to wishlist`);
       return [...prev, product];
     });
   }, [showToast]);
